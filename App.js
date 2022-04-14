@@ -35,8 +35,11 @@ const TabComponent = props => {
   const shouldHide = useSharedValue(false);
 
   const onScrollHandler = useAnimatedGestureHandler({
-    onEnd: () => {
+    onStart: () => {
       shouldHide.value = true;
+    },
+    onEnd: () => {
+      shouldHide.value = false;
     },
   });
 
