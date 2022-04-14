@@ -38,6 +38,8 @@ public class MainApplication extends Application implements ReactApplication {
           return "index";
         }
 
+
+        // Não é necessário: A partir da versão 2.5 do reanimated, a biblioteca instala o JSI automaticamente.
         @Override
         protected JSIModulePackage getJSIModulePackage() {
             return new ReanimatedJSIModulePackage();
